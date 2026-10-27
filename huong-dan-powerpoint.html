@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TyeLow - Kho Mẫu CapCut & PowerPoint</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!-- ================= HEADER SECTION ================= -->
+<header class="main-header">
+    <div class="header-pill">
+        
+        <!-- Logo -->
+        <a href="index.html" class="header-logo">
+            <img src="assets/images/tyelowlogo.png" alt="TyeLow Logo" class="custom-logo-img">
+            <span class="logo-text">TyeLow</span>
+        </a>
+
+        <!-- Thanh điều hướng chính (Desktop & Mobile) -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Trang chủ</a>
+
+            <!-- Menu Hướng dẫn (Có 3 trang con) -->
+            <div class="nav-item has-dropdown">
+                <a href="huong-dan.html" class="nav-link dropdown-toggle active">
+                    Hướng dẫn
+                    <svg class="arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="huong-dan-capcut.html" class="dropdown-item">Cách dùng mẫu CapCut</a>
+                    <a href="huong-dan-powerpoint.html" class="dropdown-item">Chèn Video vào PowerPoint</a>
+                    <a href="huong-dan-canva.html" class="dropdown-item">Sử dụng trên Canva</a>
+                </div>
+            </div>
+
+            <a href="goc-nho.html" class="nav-link">Góc nhỏ</a>
+            <a href="lien-he.html" class="nav-link">Liên hệ</a>
+        </nav>
+
+        <!-- Nhóm Icon Action bên phải (Giống hình Figma) -->
+        <div class="header-actions">
+            <!-- Nút Trở về (Màu cam nổi bật) -->
+            <a href="huong-dan.html" class="action-btn orange-btn" aria-label="Back to Guide" title="Trở về trang Hướng dẫn">
+                <!-- Icon Mũi tên hướng sang trái -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+
+            <!-- Nút Hamburger Menu (Chỉ hiện trên Mobile) -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ================= PHẦN THÂN: HƯỚNG DẪN POWERPOINT ================= -->
+<main class="detail-guide-section">
+    <div class="hero-bg-layer" id="heroBg"></div>
+
+    <div class="container">
+        <!-- Tiêu đề trang -->
+        <div class="guide-detail-header">
+            <span class="guide-badge">HƯỚNG DẪN CHI TIẾT</span>
+            <h1 class="guide-main-title">CHÈN VIDEO POWERPOINT</h1>
+            <p class="guide-subtitle">LÀM CHỦ SLIDE TRÊN MỌI THIẾT BỊ</p>
+        </div>
+
+        <!-- Bảng chọn Thiết bị (Device Selector) -->
+        <div class="device-selector">
+            <h3>Bạn đang thao tác trên thiết bị nào?</h3>
+            <div class="device-btns">
+                <a href="#mobile-guide" class="device-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    Điện thoại
+                </a>
+                <a href="#pc-guide" class="device-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    Máy tính (PC)
+                </a>
+            </div>
+        </div>
+
+        <!-- ================= KHU VỰC 1: ĐIỆN THOẠI ================= -->
+        <div id="mobile-guide" class="device-section">
+            <div class="section-divider">
+                <h2>HƯỚNG DẪN TRÊN ĐIỆN THOẠI</h2>
+                <p>Thao tác trực tiếp qua ứng dụng PowerPoint Mobile</p>
+            </div>
+
+            <!-- Ô giới thiệu App PowerPoint -->
+            <div class="app-download-box">
+                <!-- Khung chứa Logo -->
+                <div class="app-icon">
+                    <img src="assets/images/HDPP/logo_powerpoint.svg" alt="Microsoft PowerPoint Logo">
+                </div>
+    
+            <!-- Khung chứa nội dung chữ và link -->
+                <div class="app-info">
+                    <h4>Microsoft PowerPoint</h4>
+                    <p>Đây là app mình sử dụng để hướng dẫn mọi người, bấm vào đây để tải xuống 
+                        <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint" target="_blank" class="download-link">Android</a> hoặc 
+                        <a href="https://apps.apple.com/us/app/microsoft-powerpoint/id586449534" target="_blank" class="download-link">iOS</a>.
+                    </p>
+                </div>
+        </div>
+
+            <div class="steps-list">
+                <!-- Bước 1 - Mobile -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>01</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Click</h2>
+                        <p class="step-desc">Click vào dấu mũi tên.</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="portrait-img-box"><img src="assets/images/HDPP/1.jpg" alt="Bước 1" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Bước 2 - Mobile -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>02</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Xổ Ra</h2>
+                        <p class="step-desc">Click vào đây để xổ ra.</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="portrait-img-box"><img src="assets/images/HDPP/2.jpg" alt="Bước 2" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Bước 3 - Mobile -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>03</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Chèn</h2>
+                        <p class="step-desc">Chọn "Chèn"</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="portrait-img-box"><img src="assets/images/HDPP/3.jpg" alt="Bước 3" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Bước 4 - Mobile -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>04</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Chọn Video</h2>
+                        <p class="step-desc">Chọn "Video" (liên tiếp 2 lần).</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="portrait-img-box"><img src="assets/images/HDPP/4.jpg" alt="Bước 4" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Bước 5 - Mobile -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>05</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Chọn Video Từ Thư Viện</h2>
+                        <p class="step-desc">Chọn video bạn muốn thêm vào.</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="portrait-img-box"><img src="assets/images/HDPP/5.jpg" alt="Bước 5" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Bước 6 - Mobile -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>06</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Căn Chỉnh</h2>
+                        <p class="step-desc">Tinh chỉnh video vừa với khung hình.<br> Tiếp theo là click vào dấu tích để lưu</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="portrait-img-box"><img src="assets/images/HDPP/6.jpg" alt="Bước 6" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Mẹo nhỏ Mobile -->
+                <div class="note-container" style="background-color: rgba(16, 185, 129, 0.05); border-color: #10b981;">
+                    <div class="note-title-box" style="color: #10b981;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <h3>MẸO HAY</h3>
+                    </div>
+                    <ul class="note-list">
+                        <li>Tinh chỉnh video bằng những chấm <strong>tròn trên các góc</strong> cho vừa với khung hình.</li>
+                        <li>Không nên dùng các <strong>chấm tròn trên cạnh</strong> để kéo dãn vì có thể làm hỏng bố cục, mờ và vỡ hình.</li>
+                    </ul>
+                </div>
+
+                <!-- Hoàn thành - Mobile -->
+                <div class="step-card completion-card" style="margin-top: 40px;">
+                    <div class="step-badge-col"><div class="step-circle done"><span>XONG</span><strong class="check-icon">✓</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title highlight">Tuyệt Vời!</h2>
+                        <p class="step-desc">Trình chiếu và tận hưởng thôi.</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= KHU VỰC 2: MÁY TÍNH (PC) ================= -->
+        <div id="pc-guide" class="device-section">
+            <div class="section-divider">
+                <h2>HƯỚNG DẪN TRÊN MÁY TÍNH</h2>
+                <p>Thao tác chuẩn xác trên bản PowerPoint Desktop</p>
+            </div>
+
+            <div class="steps-list">
+                <!-- Bước 1 - PC -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>01</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Chọn Vị Trí Slide</h2>
+                        <p class="step-desc">Nhấp chọn trang slide cần thêm video. Sau đó chuyển sang tab <strong>Insert (Chèn)</strong> trên thanh công cụ Ribbon ở góc trên màn hình.</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="landscape-img-box"><img src="assets/images/HDPP/HDPP2/1.jpg" alt="PC Bước 1" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Bước 2 - PC -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>02</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Chèn File Video</h2>
+                        <p class="step-desc">1. Click vào "Phương tiện"<br>2. Chọn "Video"<br>3. Chọn "Trên thiết bị này"</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="landscape-img-box"><img src="assets/images/HDPP/HDPP2/2.jpg" alt="PC Bước 2" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Bước 3 - PC -->
+                <div class="step-card">
+                    <div class="step-badge-col"><div class="step-circle"><span>BƯỚC</span><strong>03</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title">Chọn Video Từ Thư Viện</h2>
+                        <p class="step-desc">Chọn video của bạn đã lưu trên máy, tiếp theo click "Chèn"</p>
+                    </div>
+                    <div class="step-image-col">
+                        <div class="landscape-img-box"><img src="assets/images/HDPP/HDPP2/3.jpg" alt="PC Bước 3" class="guide-img"></div>
+                    </div>
+                </div>
+
+                <!-- Hoàn thành - PC -->
+                <div class="step-card completion-card">
+                    <div class="step-badge-col"><div class="step-circle done"><span>XONG</span><strong class="check-icon">✓</strong></div></div>
+                    <div class="step-content-col">
+                        <h2 class="step-title highlight">Hoàn Tất Bản Trình Chiếu!</h2>
+                        <p class="step-desc">Trình chiếu lên và chiêm ngưỡng thôi!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ================= FOOTER SECTION ================= -->
+<footer class="site-footer">
+    <div class="container footer-grid">
+        
+        <!-- Cột Trái: Thông tin thương hiệu & Logo -->
+        <div class="footer-brand">
+            
+            <!-- VỊ TRÍ LOGO: Đang dùng chữ, bạn có thể thay bằng thẻ <img src="logo.png"> -->
+            <h2 class="footer-logo">TYELOW</h2>
+            
+            <p class="footer-desc">
+                Đây là góc nhỏ cũng như là một dự án nhỏ mình muốn xây dựng để dành tặng ý nghĩa đến mọi người
+            </p>
+            <p class="footer-copy">&copy; 2026 TyeLow. All rights reserved</p>
+            
+            <!-- Các icon Mạng Xã Hội (Dễ dàng thay đổi SVG bên trong) -->
+            <div class="footer-socials">
+                <!-- Icon TikTok -->
+                <a href="https://www.tiktok.com/@tyelow08" target="_blank" aria-label="TikTok" title="Ghé thăm TikTok của mình">
+                    <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                    </svg>
+                </a>
+                <!-- Icon CapCut -->
+                <a href="https://mobile.capcutshare.com/sv2/ZSgqJ48gd/" target="_blank" aria-label="CapCut" title="Xem các mẫu CapCut">
+                    <img src="assets/images/capcutlogo.svg" alt="CapCut" style="width: 20px; height: 20px;">
+                </a>
+            </div>
+        </div>
+
+        <!-- Cột Phải: Các cột liên kết (Thêm bớt dễ dàng bằng thẻ <li>) -->
+        <div class="footer-links-container">
+            
+            <!-- Nhóm 1: Đặc trưng -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Đặc trưng</h4>
+                <ul class="footer-list">
+                    <li><a href="https://mobile.capcutshare.com/sv2/ZSgqJ48gd/">Intro</a></li>
+                    <li><a href="huong-dan.html">Cách dùng mẫu</a></li>
+                    <!-- Thêm dòng mới thì copy dòng bên dưới -->
+                    <!-- <li><a href="#">Tên mục mới</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Nhóm 2: Tìm hiểu thêm -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Tìm hiểu thêm</h4>
+                <ul class="footer-list">
+                    <li><a href="huong-dan-powerpoint.html">Chèn mẫu vào PP</a></li>
+                    <li><a href="huong-dan-canva.html">Chèn mẫu vào Canva</a></li>
+                </ul>
+            </div>
+
+            <!-- Nhóm 3: Hỗ trợ -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Hỗ trợ</h4>
+                <ul class="footer-list">
+                    <li><a href="lien-he.html">Liên hệ</a></li>
+                    <li><a href="lien-he.html#directEmailBox">Góp ý</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+</body>
+</html>

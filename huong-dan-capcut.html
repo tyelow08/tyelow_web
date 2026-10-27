@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TyeLow - Kho Mẫu CapCut & PowerPoint</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!-- ================= HEADER SECTION ================= -->
+<header class="main-header">
+    <div class="header-pill">
+        
+        <!-- Logo -->
+        <a href="index.html" class="header-logo">
+            <img src="assets/images/tyelowlogo.png" alt="TyeLow Logo" class="custom-logo-img">
+            <span class="logo-text">TyeLow</span>
+        </a>
+
+        <!-- Thanh điều hướng chính (Desktop & Mobile) -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Trang chủ</a>
+
+            <!-- Menu Hướng dẫn (Có 3 trang con) -->
+            <div class="nav-item has-dropdown">
+                <a href="huong-dan.html" class="nav-link dropdown-toggle active">
+                    Hướng dẫn
+                    <svg class="arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="huong-dan-capcut.html" class="dropdown-item">Cách dùng mẫu CapCut</a>
+                    <a href="huong-dan-powerpoint.html" class="dropdown-item">Chèn Video vào PowerPoint</a>
+                    <a href="huong-dan-canva.html" class="dropdown-item">Sử dụng trên Canva</a>
+                </div>
+            </div>
+
+            <a href="goc-nho.html" class="nav-link">Góc nhỏ</a>
+            <a href="lien-he.html" class="nav-link">Liên hệ</a>
+        </nav>
+
+        <!-- Nhóm Icon Action bên phải (Giống hình Figma) -->
+        <div class="header-actions">
+            <!-- Nút Trở về (Màu cam nổi bật) -->
+            <a href="huong-dan.html" class="action-btn orange-btn" aria-label="Back to Guide" title="Trở về trang Hướng dẫn">
+                <!-- Icon Mũi tên hướng sang trái -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+
+            <!-- Nút Hamburger Menu (Chỉ hiện trên Mobile) -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- ================= PHẦN THÂN: HƯỚNG DẪN CHI TIẾT ================= -->
+<main class="detail-guide-section">
+    <!-- Lớp nền lưới hạt (Dùng chung từ trang chủ) -->
+    <div class="hero-bg-layer" id="heroBg"></div>
+
+    <div class="container">
+        <!-- Tiêu đề trang -->
+        <div class="guide-detail-header">
+            <span class="guide-badge">HƯỚNG DẪN CHI TIẾT</span>
+            <h1 class="guide-main-title">CÁCH DÙNG MẪU CAPCUT</h1>
+            <p class="guide-subtitle">4 BƯỚC ĐƠN GIẢN ĐỂ SÁNG TẠO VIDEO</p>
+        </div>
+
+        <!-- Quy trình các bước -->
+        <div class="steps-list">
+
+            <!-- BƯỚC 1 -->
+            <div class="step-card">
+                <!-- Vòng tròn số bước -->
+                <div class="step-badge-col">
+                    <div class="step-circle">
+                        <span>BƯỚC</span>
+                        <strong>01</strong>
+                    </div>
+                </div>
+                <!-- Nội dung chữ -->
+                <div class="step-content-col">
+                    <h2 class="step-title">Chọn Mẫu</h2>
+                    <p class="step-desc">
+                        Click vào<strong>"Thử mẫu này".</strong>
+                    </p>
+                </div>
+                <!-- Ảnh tỉ lệ đứng 9:16 -->
+                <div class="step-image-col">
+                    <div class="portrait-img-box">
+                        <!-- THAY ẢNH BƯỚC 1 CỦA BẠN VÀO ĐÂY (ẢNH 9:16) -->
+                        <img src="assets/images/HDCC/1.png" alt="Bước 1" class="guide-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BƯỚC 2 -->
+            <div class="step-card">
+                <div class="step-badge-col">
+                    <div class="step-circle">
+                        <span>BƯỚC</span>
+                        <strong>02</strong>
+                    </div>
+                </div>
+                <div class="step-content-col">
+                    <h2 class="step-title">Nhập Ảnh</h2>
+                    <p class="step-desc">
+                        Nhập đầy đủ ảnh vào.
+                    </p>
+                </div>
+                <div class="step-image-col">
+                    <div class="portrait-img-box">
+                        <!-- THAY ẢNH BƯỚC 2 CỦA BẠN VÀO ĐÂY (ẢNH 9:16) -->
+                        <img src="assets/images/HDCC/2.png" alt="Bước 2" class="guide-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BƯỚC 3 -->
+            <div class="step-card">
+                <div class="step-badge-col">
+                    <div class="step-circle">
+                        <span>BƯỚC</span>
+                        <strong>03</strong>
+                    </div>
+                </div>
+                <div class="step-content-col">
+                    <h2 class="step-title">Chỉnh Sửa</h2>
+                    <p class="step-desc">
+                        1. Cắt xén, chỉnh sửa hoặc thay thế hình ảnh nếu cần thiết.<br>
+                        2. Thay văn bản (chỉnh sửa tên, vai trò,...).<br>
+                        >>> Chỉnh sửa xong, tiếp theo click vào nút "Xuất" trên góc phải.
+                    </p>
+                </div>
+                <div class="step-image-col">
+                    <div class="portrait-img-box">
+                        <!-- THAY ẢNH BƯỚC 3 CỦA BẠN VÀO ĐÂY (ẢNH 9:16) -->
+                        <img src="assets/images/HDCC/3.png" alt="Bước 3" class="guide-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BƯỚC 4 -->
+            <div class="step-card">
+                <div class="step-badge-col">
+                    <div class="step-circle">
+                        <span>BƯỚC</span>
+                        <strong>04</strong>
+                    </div>
+                </div>
+                <div class="step-content-col">
+                    <h2 class="step-title">Xuất Video</h2>
+                    <p class="step-desc">
+                        Tiếp theo, click "Xuất" lần nữa để tiến hành tạo video trong thời gian ngắn.
+                    </p>
+                </div>
+                <div class="step-image-col">
+                    <div class="portrait-img-box">
+                        <!-- THAY ẢNH BƯỚC 4 CỦA BẠN VÀO ĐÂY (ẢNH 9:16) -->
+                        <img src="assets/images/HDCC/4.png" alt="Bước 4" class="guide-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BƯỚC HOÀN THÀNH (Bước 5) -->
+            <div class="step-card completion-card">
+                <div class="step-badge-col">
+                    <div class="step-circle done">
+                        <span>XONG</span>
+                        <strong class="check-icon">✓</strong>
+                    </div>
+                </div>
+                <div class="step-content-col">
+                    <h2 class="step-title highlight">Hoàn Thành!</h2>
+                    <p class="step-desc">
+                        Chèn video vào bài(Powerpoint, Canva,...) để sử dụng.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Khối Ghi chú / Lưu ý -->
+        <div class="note-container">
+            <div class="note-title-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+                <h3>LƯU Ý KHI XUẤT VIDEO</h3>
+            </div>
+            <ul class="note-list">
+                <li>Độ phân giải: Ưu tiên chọn <strong>720P</strong> hoặc <strong>1080P</strong>để trình chiếu video một cách mượt mà nhất.</li>
+                <li>Nếu chọn chất lượng quá thấp <strong>480P</strong> thì video có thể bị mờ, không hấp dẫn.</li>
+                <li>Nếu chọn độ phân giải quá cao <strong>2K/4K</strong> có thể dẫn đến tình trạng giật(lag) trong khi trình chiếu.</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<!-- ================= FOOTER SECTION ================= -->
+<footer class="site-footer">
+    <div class="container footer-grid">
+        
+        <!-- Cột Trái: Thông tin thương hiệu & Logo -->
+        <div class="footer-brand">
+            
+            <!-- VỊ TRÍ LOGO: Đang dùng chữ, bạn có thể thay bằng thẻ <img src="logo.png"> -->
+            <h2 class="footer-logo">TYELOW</h2>
+            
+            <p class="footer-desc">
+                Đây là góc nhỏ cũng như là một dự án nhỏ mình muốn xây dựng để dành tặng ý nghĩa đến mọi người
+            </p>
+            <p class="footer-copy">&copy; 2026 TyeLow. All rights reserved</p>
+            
+            <!-- Các icon Mạng Xã Hội (Dễ dàng thay đổi SVG bên trong) -->
+            <div class="footer-socials">
+                <!-- Icon TikTok -->
+                <a href="https://www.tiktok.com/@tyelow08" target="_blank" aria-label="TikTok" title="Ghé thăm TikTok của mình">
+                    <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                    </svg>
+                </a>
+                <!-- Icon CapCut -->
+                <a href="https://mobile.capcutshare.com/sv2/ZSgqJ48gd/" target="_blank" aria-label="CapCut" title="Xem các mẫu CapCut">
+                    <img src="assets/images/capcutlogo.svg" alt="CapCut" style="width: 20px; height: 20px;">
+                </a>
+            </div>
+        </div>
+
+        <!-- Cột Phải: Các cột liên kết (Thêm bớt dễ dàng bằng thẻ <li>) -->
+        <div class="footer-links-container">
+            
+            <!-- Nhóm 1: Đặc trưng -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Đặc trưng</h4>
+                <ul class="footer-list">
+                    <li><a href="https://mobile.capcutshare.com/sv2/ZSgqJ48gd/">Intro</a></li>
+                    <li><a href="huong-dan.html">Cách dùng mẫu</a></li>
+                    <!-- Thêm dòng mới thì copy dòng bên dưới -->
+                    <!-- <li><a href="#">Tên mục mới</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Nhóm 2: Tìm hiểu thêm -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Tìm hiểu thêm</h4>
+                <ul class="footer-list">
+                    <li><a href="huong-dan-powerpoint.html">Chèn mẫu vào PP</a></li>
+                    <li><a href="huong-dan-canva.html">Chèn mẫu vào Canva</a></li>
+                </ul>
+            </div>
+
+            <!-- Nhóm 3: Hỗ trợ -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Hỗ trợ</h4>
+                <ul class="footer-list">
+                    <li><a href="lien-he.html">Liên hệ</a></li>
+                    <li><a href="lien-he.html#directEmailBox">Góp ý</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TyeLow - Kho Mẫu CapCut & PowerPoint</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!-- ================= HEADER SECTION ================= -->
+<header class="main-header">
+    <div class="header-pill">
+        
+        <!-- Logo -->
+        <a href="index.html" class="header-logo">
+            <img src="assets/images/tyelowlogo.png" alt="TyeLow Logo" class="custom-logo-img">
+            <span class="logo-text">TyeLow</span>
+        </a>
+
+        <!-- Thanh điều hướng chính (Desktop & Mobile) -->
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link active">Trang chủ</a>
+
+            <!-- Menu Hướng dẫn (Có 3 trang con) -->
+            <div class="nav-item has-dropdown">
+                <a href="huong-dan.html" class="nav-link dropdown-toggle">
+                    Hướng dẫn
+                    <svg class="arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="huong-dan-capcut.html" class="dropdown-item">Cách dùng mẫu CapCut</a>
+                    <a href="huong-dan-powerpoint.html" class="dropdown-item">Chèn Video vào PowerPoint</a>
+                    <a href="huong-dan-canva.html" class="dropdown-item">Sử dụng trên Canva</a>
+                </div>
+            </div>
+
+            <a href="goc-nho.html" class="nav-link">Góc nhỏ</a>
+            <a href="lien-he.html" class="nav-link">Liên hệ</a>
+        </nav>
+
+        <!-- Nhóm Icon Action bên phải (Giống hình Figma) -->
+        <div class="header-actions">
+            <!-- Icon hướng dẫn -->
+            <a href="huong-dan.html" class="action-btn guide-btn" title="Hướng dẫn" aria-label="Hướng dẫn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+            </a>
+
+            <!-- Icon Trang chủ / Profile (Nổi bật màu cam) -->
+            <a href="index.html" class="action-btn orange-btn" aria-label="Home / Profile" title="Trang cá nhân">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+            </a>
+
+            <!-- Nút Hamburger Menu (Chỉ hiện trên Mobile) -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+</header>
+<!-- ================= HERO & BENTO GRID SECTION ================= -->
+<section class="hero-section">
+    
+    <!-- Lớp nền phía sau chữ (Có thể thay bằng ảnh tùy thích) -->
+    <div class="hero-bg-layer" id="heroBg"></div>
+
+    <!-- Nội dung Tiêu đề -->
+    <div class="hero-content">
+        <h1 class="hero-title">KHÁM PHÁ MẪU</h1>
+        <p class="hero-subtitle">NƠI INTRO BỐC ĐẦU</p>
+    </div>
+
+    <!-- Lưới thẻ (Bento Grid) -->
+    <div class="bento-grid container">
+        
+        <!-- Thẻ 1: Mẫu intro mới (Cột 1) -->
+        <a href="https://mobile.capcutshare.com/sv2/ZSgqjcckk/" class="bento-card tall-card">
+            <!-- Khu vực chứa ảnh -->
+            <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=600" alt="Bài Thuyết Trình" class="card-img">
+            </div>
+            <!-- Khu vực nội dung -->
+            <div class="card-body">
+                <h3 class="card-title">Mẫu intro mới</h3>
+                <p class="card-desc">Các mẫu mở bài phong cách - đa dạng - độc đáo gây ấn tượng.</p>
+                <div class="card-link">
+                    Xem ngay 
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+            </div>
+        </a>
+
+        <!-- Thẻ 2: Hướng dẫn dùng mẫu (Cột 2) -->
+        <a href="huong-dan.html" class="bento-card tall-card">
+            <div class="card-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=600" alt="Hướng dẫn" class="card-img">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Hướng dẫn dùng mẫu</h3>
+                <p class="card-desc">Cách dùng mẫu Cap Cut và chèn video vào Powerpoint, Canva.</p>
+                <div class="card-link">
+                    Xem ngay 
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+            </div>
+        </a>
+
+        <!-- Cột 3: Chứa 2 thẻ nhỏ xếp chồng lên nhau -->
+        <div class="bento-col-small">
+            
+            <!-- Thẻ 3: Góc nhỏ -->
+            <a href="goc-nho.html" class="bento-card small-card">
+                <div class="card-body">
+                    <h3 class="card-title">Góc nhỏ</h3>
+                    <p class="card-desc">Nơi tôi biến ý tưởng thành hiện thực.</p>
+                    <div class="card-link">
+                        Ngó xem một tí 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Thẻ 4: Liên hệ -->
+            <a href="lien-he.html" class="bento-card small-card">
+                <div class="card-body">
+                    <h3 class="card-title">Liên Hệ</h3>
+                    <p class="card-desc">Bạn cần hỗ trợ hay gặp vấn đề cần giải quyết, xin liên hệ tại đây.</p>
+                    <div class="card-link">
+                        Cần hỗ trợ 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+<!-- ================= KHU VỰC BÌNH CHỌN (FIREBASE VOTE) ================= -->
+<div class="glass-vote-card">
+    <h3 class="vote-title">Bạn muốn mình làm về các mẫu PowerPoint kết hợp với intro và outro không?</h3>
+    <p class="vote-subtitle">Tiếp động lực bằng cách ấn vào bên dưới nhé!</p>
+    
+    <div class="vote-action">
+        <button id="voteBtn" class="vote-btn">
+            <!-- Icon Trái tim ngọn lửa -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            Ủng hộ ngay
+        </button>
+        <div class="vote-count">
+            Đã có <strong id="voteCounter">...</strong> lượt ủng hộ
+        </div>
+    </div>
+    <p id="voteThanks" class="vote-thanks-msg" style="display:none;">Cảm ơn bạn đã tiếp thêm động lực! ❤️</p>
+</div>
+<!-- ================= FOOTER SECTION ================= -->
+<footer class="site-footer">
+    <div class="container footer-grid">
+        
+        <!-- Cột Trái: Thông tin thương hiệu & Logo -->
+        <div class="footer-brand">
+            
+            <!-- VỊ TRÍ LOGO: Đang dùng chữ, bạn có thể thay bằng thẻ <img src="logo.png"> -->
+            <h2 class="footer-logo">TYELOW</h2>
+            
+            <p class="footer-desc">
+                Đây là góc nhỏ cũng như là một dự án nhỏ mình muốn xây dựng để dành tặng ý nghĩa đến mọi người
+            </p>
+            <p class="footer-copy">&copy; 2026 TyeLow. All rights reserved</p>
+            
+            <div class="footer-socials">
+                <!-- Icon TikTok -->
+                <a href="https://www.tiktok.com/@tyelow08" target="_blank" aria-label="TikTok" title="Ghé thăm TikTok của mình">
+                    <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                    </svg>
+                </a>
+                <!-- Icon CapCut -->
+                <a href="https://mobile.capcutshare.com/sv2/ZSgqJ48gd/" target="_blank" aria-label="CapCut" title="Xem các mẫu CapCut">
+                    <img src="assets/images/capcutlogo.svg" alt="CapCut" style="width: 20px; height: 20px;">
+                </a>
+            </div>
+        </div>
+
+        <!-- Cột Phải: Các cột liên kết (Thêm bớt dễ dàng bằng thẻ <li>) -->
+        <div class="footer-links-container">
+            
+            <!-- Nhóm 1: Đặc trưng -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Đặc trưng</h4>
+                <ul class="footer-list">
+                    <li><a href="https://mobile.capcutshare.com/sv2/ZSgqJ48gd/">Intro</a></li>
+                    <li><a href="huong-dan.html">Cách dùng mẫu</a></li>
+                    <!-- Thêm dòng mới thì copy dòng bên dưới -->
+                    <!-- <li><a href="#">Tên mục mới</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Nhóm 2: Tìm hiểu thêm -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Tìm hiểu thêm</h4>
+                <ul class="footer-list">
+                    <li><a href="huong-dan-powerpoint.html">Chèn mẫu vào PP</a></li>
+                    <li><a href="huong-dan-canva.html">Chèn mẫu vào Canva</a></li>
+                </ul>
+            </div>
+
+            <!-- Nhóm 3: Hỗ trợ -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Hỗ trợ</h4>
+                <ul class="footer-list">
+                    <li><a href="lien-he.html">Liên hệ</a></li>
+                    <li><a href="lien-he.html#directEmailBox">Góp ý</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- Cài đặt Firebase qua dạng Module -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+    // 1. THAY BẰNG CONFIG CỦA BẠN (LẤY TỪ BƯỚC 2)
+    const firebaseConfig = {
+        apiKey: "AIzaSyBQSo-A5PvgdcYcPCp1hK9gKigg-ERueSk",
+        authDomain: "tyelow08.firebaseapp.com",
+        databaseURL: "https://tyelow08-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "tyelow08",
+        storageBucket: "tyelow08.firebasestorage.app",
+        messagingSenderId: "954902738222",
+        appId: "1:954902738222:web:09a3ac6b20d5befd59b6bf",
+        measurementId: "G-H2JW8EPS93"
+    };
+
+    // Khởi tạo Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const voteRef = ref(db, 'powerpoint_votes'); // Tạo bảng tên 'powerpoint_votes'
+
+    // Kết nối HTML
+    const voteBtn = document.getElementById('voteBtn');
+    const voteCounter = document.getElementById('voteCounter');
+    const voteThanks = document.getElementById('voteThanks');
+
+    // Kiểm tra xem trình duyệt này đã vote chưa (lưu vào bộ nhớ LocalStorage)
+    if (localStorage.getItem('hasVoted_ppt')) {
+        voteBtn.classList.add('voted');
+        voteBtn.innerHTML = 'Đã ủng hộ ❤️';
+        voteThanks.style.display = 'block';
+    }
+
+    // Lắng nghe dữ liệu Realtime (Cập nhật số lập tức nếu có người khác bấm)
+    onValue(voteRef, (snapshot) => {
+        const data = snapshot.val();
+        voteCounter.innerText = data || 0;
+    });
+
+    // Khi người dùng ấn nút
+    voteBtn.addEventListener('click', () => {
+        if (localStorage.getItem('hasVoted_ppt')) return; // Chặn bấm 2 lần
+
+        // Cộng 1 lên Database một cách an toàn
+        runTransaction(voteRef, (currentVotes) => {
+            return (currentVotes || 0) + 1;
+        }).then(() => {
+            // Đổi giao diện sau khi vote xong
+            localStorage.setItem('hasVoted_ppt', 'true');
+            voteBtn.classList.add('voted');
+            voteBtn.innerHTML = 'Đã ủng hộ ❤️';
+            voteThanks.style.display = 'block';
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+body {
+    background-color: #FAF6F2; /* Chuyển nền gốc thành màu kem sáng */
+    padding-top: 0; /* Xóa khoảng trống thừa phía trên */
+}
+/* =========================================================
+   GÓC NHỎ CHILL (LIGHT THEME & GLASSMORPHISM)
+   ========================================================= */
+.chill-section {
+    background-color: #FAF6F2;
+    min-height: 100vh;
+    padding: 120px 0 80px 0;
+    position: relative;
+    overflow: hidden;
+    color: #333333;
+}
+
+/* Các đốm màu (Blob) trang trí mờ ảo phía sau */
+.chill-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+.blob-1 {
+    width: 400px; height: 400px;
+    background: rgba(255, 187, 136, 0.4);
+    top: 50px; left: -100px;
+}
+.blob-2 {
+    width: 350px; height: 350px;
+    background: rgba(186, 225, 203, 0.4);
+    bottom: 0px; right: -50px;
+}
+
+.chill-container {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tiêu đề */
+.chill-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.chill-title {
+    font-size: 46px;
+    font-weight: 800;
+    color: #4A4036;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+.chill-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #D4771C;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* ================= KHUNG PLAYLIST KÍNH MỜ ================= */
+.glass-playlist-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.playlist-header {
+    margin-bottom: 30px;
+}
+.playlist-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #11131E;
+    margin: 0 0 8px 0;
+}
+.playlist-header p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ================= DANH SÁCH BÀI HÁT ================= */
+.playlist-tracks {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+.track-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Ảnh bìa bài hát */
+.track-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.track-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Thông tin bài hát */
+.track-info {
+    flex-grow: 1;
+}
+.track-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #11131E;
+    margin: 0 0 4px 0;
+}
+.track-subtitle {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}
+
+/* ================= HIỆU ỨNG SÓNG NHẠC ================= */
+.audio-wave {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 24px;
+    margin-right: 15px;
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+.track-item.playing .audio-wave {
+    opacity: 1;
+}
+
+.wave-bar {
+    width: 3px;
+    background-color: var(--accent-orange);
+    border-radius: 3px;
+    height: 4px;
+}
+
+.track-item.playing .wave-bar {
+    animation: waveAnim 1s ease-in-out infinite alternate;
+}
+.track-item.playing .wave-bar:nth-child(2) { animation-delay: -0.2s; }
+.track-item.playing .wave-bar:nth-child(3) { animation-delay: -0.4s; }
+.track-item.playing .wave-bar:nth-child(4) { animation-delay: -0.6s; }
+
+@keyframes waveAnim {
+    0% { height: 4px; }
+    100% { height: 20px; }
+}
+
+/* ================= NÚT PLAY ================= */
+.track-play-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #4A4B57;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.track-play-btn:hover {
+    transform: scale(1.05);
+}
+
+.track-item.playing .track-play-btn {
+    background-color: var(--accent-orange);
+    box-shadow: 0 4px 15px var(--accent-orange-glow);
+}
+
+/* Tối ưu cho Mobile */
+@media (max-width: 600px) {
+    .glass-playlist-card { padding: 24px; }
+    .chill-title { font-size: 32px; }
+    .audio-wave { display: none; }
+}
+/* =========================================================
+   THANH ĐIỀU KHIỂN NHẠC (STICKY PLAYER BAR)
+   ========================================================= */
+/* Đổi nền thành màu tối, chữ trắng để nổi bật hoàn toàn */
+.music-player-bar {
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;
+    background: rgba(26, 28, 40, 0.95); /* Nền tối */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 16px 0;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #ffffff;
+}
+
+.music-player-bar.active { transform: translateY(0); }
+.player-bar-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+
+/* Thông tin bài hát */
+.player-info { display: flex; align-items: center; gap: 16px; min-width: 250px; }
+.bar-cover { width: 48px; height: 48px; border-radius: 10px; overflow: hidden; }
+.bar-cover img { width: 100%; height: 100%; object-fit: cover; }
+.bar-text h4 { font-size: 15px; font-weight: 700; color: #ffffff; margin: 0 0 4px 0; }
+.bar-text p { font-size: 12px; color: #94a3b8; margin: 0; }
+
+/* Khu vực tua nhạc */
+.player-controls { flex-grow: 1; display: flex; align-items: center; gap: 20px; max-width: 700px; }
+.bar-play-btn {
+    width: 44px; height: 44px; border-radius: 50%;
+    background-color: var(--accent-orange); color: white; border: none;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; box-shadow: 0 4px 15px var(--accent-orange-glow);
+    transition: transform 0.2s; flex-shrink: 0;
+}
+.bar-play-btn:hover { transform: scale(1.05); }
+
+/* Thanh Tua Nhạc & Âm Lượng */
+.progress-wrapper { display: flex; align-items: center; gap: 12px; flex-grow: 1; font-size: 12px; color: #cbd5e1; }
+.volume-control { display: flex; align-items: center; gap: 8px; width: 120px; color: #cbd5e1; }
+
+.progress-bar {
+    -webkit-appearance: none;
+    width: 100%; height: 6px; border-radius: 5px; outline: none; cursor: pointer;
+    /* JS sẽ điều khiển biến --progress để đổ màu cam từ trái sang phải */
+    background: linear-gradient(to right, var(--accent-orange) var(--progress, 0%), #4b5563 var(--progress, 0%));
+}
+.volume-bar {
+    background: linear-gradient(to right, var(--accent-orange) var(--vol-progress, 100%), #4b5563 var(--vol-progress, 100%));
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent-orange); cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); transition: transform 0.1s;
+}
+.progress-bar::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+@media (max-width: 768px) {
+    .player-bar-container { flex-direction: column; gap: 16px; }
+    .player-info { min-width: 100%; }
+    .player-controls { width: 100%; flex-wrap: wrap; }
+    .volume-control { display: none; } /* Ẩn âm lượng trên Mobile cho gọn */
+}

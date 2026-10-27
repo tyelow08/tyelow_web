@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TyeLow - Kho Mẫu CapCut & PowerPoint</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-goc-nho.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!-- ================= HEADER SECTION ================= -->
+<header class="main-header">
+    <div class="header-pill">
+        <a href="index.html" class="header-logo">
+            <img src="assets/images/tyelowlogo.png" alt="TyeLow Logo" class="custom-logo-img">
+            <span class="logo-text">TyeLow</span>
+        </a>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Trang chủ</a>
+            <div class="nav-item has-dropdown">
+                <a href="huong-dan.html" class="nav-link dropdown-toggle">
+                    Hướng dẫn
+                    <svg class="arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </a>
+            </div>
+            <!-- Đã chuyển active sang Góc nhỏ -->
+            <a href="goc-nho.html" class="nav-link active">Góc nhỏ</a>
+            <a href="lien-he.html" class="nav-link">Liên hệ</a>
+        </nav>
+        <div class="header-actions">
+            <!-- Nút Action ẩn/hiện theo thiết kế -->
+            <!-- Icon hướng dẫn -->
+            <a href="huong-dan.html" class="action-btn guide-btn" title="Hướng dẫn" aria-label="Hướng dẫn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+            </a>
+            <a href="index.html" class="action-btn orange-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a>
+            <button class="mobile-toggle" id="mobileToggle"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </div>
+    </div>
+</header>
+
+<!-- ================= PHẦN THÂN: GÓC NHỎ CHILL ================= -->
+<main class="chill-section">
+    <!-- Các đốm màu nền tạo cảm giác chill, ấm áp -->
+    <div class="chill-blob blob-1"></div>
+    <div class="chill-blob blob-2"></div>
+
+    <div class="container chill-container">
+        <!-- Tiêu đề trang -->
+        <div class="chill-header">
+            <h1 class="chill-title">GÓC NHỎ CỦA TYELOW</h1>
+            <p class="chill-subtitle">NƠI CHIA SẺ NHỮNG GIAI ĐIỆU & CẢM HỨNG</p>
+        </div>
+
+        <!-- Khung Nhạc Kính Mờ (Glassmorphism) -->
+        <div class="glass-playlist-card">
+            <div class="playlist-header">
+                <h2>Playlists Nhà Làm ☕</h2>
+                <p>Đây là những bản nhạc mình làm, mọi người nghe thử nha!</p>
+            </div>
+
+            <!-- Danh sách bài hát sẽ được JavaScript tự động điền vào đây -->
+            <div class="playlist-tracks" id="playlistTracks">
+                <!-- HTML tĩnh được tạo bởi JS -->
+            </div>
+        </div>
+    </div>
+</main>
+<!-- ================= THANH ĐIỀU KHIỂN NHẠC (STICKY PLAYER BAR) ================= -->
+<div class="music-player-bar" id="playerBar">
+    <div class="container player-bar-container">
+        
+        <!-- Khối 1: Thông tin bài hát -->
+        <div class="player-info">
+            <div class="bar-cover">
+                <img src="" alt="Cover" id="barCover">
+            </div>
+            <div class="bar-text">
+                <h4 id="barTitle">Tên bài hát</h4>
+                <p id="barSubtitle">Phụ đề</p>
+            </div>
+        </div>
+
+        <!-- Khối 2: Điều khiển, Tua nhạc và Âm lượng -->
+        <div class="player-controls">
+            <button id="barPlayBtn" class="bar-play-btn">
+                <svg class="icon-play-bar" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <svg class="icon-pause-bar" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+            </button>
+
+            <div class="progress-wrapper">
+                <span id="timeCurrent">0:00</span>
+                <input type="range" id="progressBar" class="progress-bar" value="0" min="0" max="100" step="0.1">
+                <span id="timeTotal">0:00</span>
+            </div>
+
+            <!-- Nút chỉnh âm lượng -->
+            <div class="volume-control">
+                <svg class="icon-volume" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                <input type="range" id="volumeBar" class="progress-bar volume-bar" value="100" min="0" max="100">
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- ================= FOOTER SECTION ================= -->
+<footer class="site-footer">
+    <div class="container footer-grid">
+        
+        <!-- Cột Trái: Thông tin thương hiệu & Logo -->
+        <div class="footer-brand">
+            
+            <!-- VỊ TRÍ LOGO: Đang dùng chữ, bạn có thể thay bằng thẻ <img src="logo.png"> -->
+            <h2 class="footer-logo">TYELOW</h2>
+            
+            <p class="footer-desc">
+                Đây là góc nhỏ cũng như là một dự án nhỏ mình muốn xây dựng để dành tặng ý nghĩa đến mọi người
+            </p>
+            <p class="footer-copy">&copy; 2026 TyeLow. All rights reserved</p>
+            
+            <!-- Các icon Mạng Xã Hội (Dễ dàng thay đổi SVG bên trong) -->
+            <!-- Các icon Mạng Xã Hội -->
+            <div class="footer-socials">
+                
+                <!-- Icon TikTok -->
+                <a href="https://www.tiktok.com/@tyelow08" target="_blank" aria-label="TikTok" title="Ghé thăm TikTok của mình">
+                    <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor">
+                        <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                    </svg>
+                </a>
+                <!-- Icon CapCut -->
+                <a href="https://mobile.capcutshare.com/sv2/ZSgqJ48gd/" target="_blank" aria-label="CapCut" title="Xem các mẫu CapCut">
+                    <img src="assets/images/capcutlogo.svg" alt="CapCut" style="width: 20px; height: 20px;">
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Cột Phải: Các cột liên kết (Thêm bớt dễ dàng bằng thẻ <li>) -->
+        <div class="footer-links-container">
+            
+            <!-- Nhóm 1: Đặc trưng -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Đặc trưng</h4>
+                <ul class="footer-list">
+                    <li><a href="https://mobile.capcutshare.com/sv2/ZSgqJ48gd/">Intro</a></li>
+                    <li><a href="huong-dan.html">Cách dùng mẫu</a></li>
+                    <!-- Thêm dòng mới thì copy dòng bên dưới -->
+                    <!-- <li><a href="#">Tên mục mới</a></li> -->
+                </ul>
+            </div>
+
+            <!-- Nhóm 2: Tìm hiểu thêm -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Tìm hiểu thêm</h4>
+                <ul class="footer-list">
+                    <li><a href="huong-dan-powerpoint.html">Chèn mẫu vào PP</a></li>
+                    <li><a href="huong-dan-canva.html">Chèn mẫu vào Canva</a></li>
+                </ul>
+            </div>
+
+            <!-- Nhóm 3: Hỗ trợ -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Hỗ trợ</h4>
+                <ul class="footer-list">
+                    <li><a href="lien-he.html">Liên hệ</a></li>
+                    <li><a href="lien-he.html#directEmailBox">Góp ý</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</footer>
+</body>
+</html>
